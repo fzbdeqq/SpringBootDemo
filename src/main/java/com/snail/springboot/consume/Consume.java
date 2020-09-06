@@ -18,10 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class Consume implements CommandLineRunner {
     @Autowired
     private RestTemplate restTemplate;
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder){
-        return restTemplateBuilder.build();
-    }
+
     @Override
     public void run(String... args) throws Exception {
         Quote quote=restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
