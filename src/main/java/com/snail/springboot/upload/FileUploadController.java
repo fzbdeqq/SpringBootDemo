@@ -3,6 +3,7 @@ package com.snail.springboot.upload;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,14 +17,16 @@ import java.util.stream.Collectors;
  * @Description:
  * @Date 2020/9/7 8:42
  */
-
+@Controller
 public class FileUploadController {
+
     private final StorageService storageService;
 
     public FileUploadController(StorageService storageService) {
         this.storageService = storageService;
     }
-    @GetMapping("/upload")
+
+    @GetMapping("/")
     public String listUploadedFiles(Model model){
         model.addAttribute("files", storageService.loadAll().map(
                 path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
@@ -40,7 +43,7 @@ public class FileUploadController {
                 "attachment;filename=\""+file.getFilename()+"\"").body(file);
     }
 
-    @PostMapping("/upload")
+    @PostMapping("/")
     public String handleFileUpload(@RequestParam("file")MultipartFile file, RedirectAttributes redirectAttributes){
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message","You successfully uploaded "+file.getOriginalFilename()+"!");
