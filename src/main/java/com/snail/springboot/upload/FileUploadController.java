@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @Description:
  * @Date 2020/9/7 8:42
  */
-@Controller
+//@Controller
 public class FileUploadController {
 
     private final StorageService storageService;

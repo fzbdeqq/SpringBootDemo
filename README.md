@@ -5,3 +5,5 @@
 ###LDAP
 ###Neo4j
 ###RabbitMQ
+###JMS——activemq
+###batch
