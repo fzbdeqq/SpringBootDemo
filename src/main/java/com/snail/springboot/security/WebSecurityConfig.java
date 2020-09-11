@@ -21,7 +21,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
 //                允许直接访问
-                .antMatchers("/","/home")
+//                .antMatchers("/","/home")
+                .antMatchers("/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

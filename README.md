@@ -7,3 +7,5 @@
 ###RabbitMQ
 ###JMS——activemq
 ###batch
+###hypermedia-driven
+###Integrating
