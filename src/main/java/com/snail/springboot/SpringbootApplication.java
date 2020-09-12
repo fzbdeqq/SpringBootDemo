@@ -9,9 +9,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.data.gemfire.config.annotation.ClientCacheApplication;
 import org.springframework.data.gemfire.config.annotation.EnableEntityDefinedRegions;
 import org.springframework.data.gemfire.repository.config.EnableGemfireRepositories;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
+@EnableAsync
 @EnableConfigurationProperties(StorageProperties.class)
 @SpringBootApplication
 @ClientCacheApplication(name = "AccessingDataGemFireApplication",logLevel = "error")
