@@ -21,6 +21,7 @@ public class BookingsRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        bookingService.del();
         bookingService.book("Alice","Bob","Carol");
 //        Assert.isTrue(bookingService.findAllBookings().size()==3,"First booking should work with no problem");
 

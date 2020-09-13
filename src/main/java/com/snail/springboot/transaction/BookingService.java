@@ -17,7 +17,10 @@ import java.util.List;
 public class BookingService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
+    public void del(){
+        log.info("del booking");
+        jdbcTemplate.execute("delete from bookings");
+    }
     public void book(String ...persons){
         for (String person:persons){
             log.info("Booking {} in a seat...",person);
