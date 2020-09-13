@@ -132,6 +132,12 @@
             <version>3.1.1-1</version>
         </dependency>
         <!--WebSocket end-->
+<!--        cache-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
