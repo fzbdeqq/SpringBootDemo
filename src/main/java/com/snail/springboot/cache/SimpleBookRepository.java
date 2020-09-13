@@ -1,6 +1,7 @@
 package com.snail.springboot.cache;
 
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
