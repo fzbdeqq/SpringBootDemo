@@ -12,3 +12,5 @@
 ###MongoDB
 ###SpringMVC
 ###soap
+
+$ docker build -t .
