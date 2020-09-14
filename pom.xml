@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <vaadin.version>14.3.5</vaadin.version>
     </properties>
 
     <dependencies>
@@ -137,7 +138,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
-
+<!--        vaadin-->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-spring-boot-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -160,6 +165,19 @@
             </exclusions>
         </dependency>
     </dependencies>
+    <!--        vaadin-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <version>${vaadin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <profiles>
         <profile>
             <id>dev</id>
