@@ -21,7 +21,7 @@ public class Consume implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Quote quote=restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-        log.info(quote.toString() );
+//        Quote quote=restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+//        log.info(quote.toString() );
     }
 }
